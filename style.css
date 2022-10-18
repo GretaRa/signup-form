@@ -26,6 +26,7 @@ img{
   height: inherit;
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .container{
@@ -51,7 +52,7 @@ img{
 
 .page-bottom{
     padding-top: 30px;
-    padding-bottom: 150px;
+    padding-bottom: 10%;
 }
 
 .page-bottom button{
