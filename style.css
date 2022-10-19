@@ -5,7 +5,8 @@
 }
 
 html{
-    font-family:  Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Helvetica , sans-serif;
+    overflow-y: hidden;
 }
 
 body{
@@ -55,45 +56,10 @@ img{
     padding-bottom: 10%;
 }
 
-.page-bottom button{
-    margin-bottom: 30px;
-    box-shadow: 0px 2px 5px 0px #B2A4A6;
-}
-
-form{
-    padding-left: 50px;
-    padding-bottom: 30px;
-    box-shadow: 0px 4px 6px -2px rgba(178, 164, 166, 0.62);
-    background-color: white;
-}
-
-form h2{
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
-.form-container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 10px;
-    row-gap: 20px;
-    max-width: 800px;
-}
-
-.input-box{
-    display: flex;
-    flex-direction: column;
-}
-
-input{
-    max-width: 260px;
-    padding: 4px;
-    border: 1px solid #b6bfc7;
-    border-radius: 2px;
-    font-size: 20px;
-}
-
 button{
+    margin-top: 30px;
+    margin-left: 50px;
+    box-shadow: 0px 2px 5px 0px #B2A4A6;
     background-color: #596D48;
     padding: 10px 40px;
     border-radius: 5px;
@@ -103,6 +69,66 @@ button{
     cursor: pointer;
     font-size: 20px;
 }
+
+form h2{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+ul{
+    padding-left: 50px;
+    padding-bottom: 30px;
+    box-shadow: 0px 4px 6px -2px rgba(178, 164, 166, 0.62);
+    background-color: white;
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 10px;
+    row-gap: 20px;
+    max-width: 800px;
+    
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+input{
+    max-width: 260px;
+    padding: 4px;
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+input:focus{
+    border:2px solid #1e60ee80;
+    box-shadow: 0 0 10px #719ECE;
+    outline:none;
+}
+
+button:active{
+    box-shadow: inset 0px 2px 5px 0px #2e2b2b;
+}
+
+input:focus:invalid:required {
+    border: 2px solid rgba(255, 0, 0, 0.616);
+    box-shadow: 0 0 5px 1px rgba(255, 0, 0, 0.555);
+  }
+
+input:focus:invalid {
+    box-shadow: none;
+    border: 2px solid #E5E7EB;
+}
+
+input:valid:required {
+    border: 2px solid rgba(108, 170, 37, 0.678);
+    box-shadow: 0 0 5px 1px rgba(80, 197, 44, 0.719);
+  }
 
 a{
     color: #596D48;
