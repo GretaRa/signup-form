@@ -40,18 +40,32 @@
                     <li class="input-box">
                         <label for="password">* Password</label>
                         <input type="password" name="password" id="password" required minlength="6" maxlength="12">
+                        <span id='message'></span>
                     </li>
                     <li class="input-box">
                         <label for="confirm_password">* Confirm password</label>
-                        <input type="password" name="confirm_password" id="confirm_password" required minlength="6" maxlength="12">
+                        <input type="password" name="confirm_password" id="confirm_password" required minlength="6" maxlength="12" onkeyup='check()'>
+                        <span id='message'></span>
                     </li>
                 </div>
             </ul>
-            <button type="submit">Create Account</button>
+            <button type="submit" >Create Account</button>
         </form>
         <div class="page-bottom">
         <p>Already have an account? <a href="#">Log in</a></p>
         </div>
     </div> 
+    <script>
+    var check = function() {
+        if (document.getElementById('password').value ==
+            document.getElementById('confirm_password').value) {
+            document.getElementById('message').style.color = 'green';
+            document.getElementById('message').innerHTML = 'Passwords match';
+        } else {
+            document.getElementById('message').style.color = 'red';
+            document.getElementById('message').innerHTML = 'Passwords don\'t match';
+        }
+    }
+    </script>
 </body>
 </html>
